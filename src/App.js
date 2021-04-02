@@ -4,7 +4,7 @@ import InfoBox from './InfoBox';
 import Table from "./Table";
 import "./App.css";
 import Map from "./Map";
-//import img1 from "/Downloads/JohnsHopkins.jpg";
+import img1 from "./images/JohnsHopkins.jpg";
   
 function App() {
   const [countries, setCountries] = useState(['india','usa']);
@@ -101,15 +101,15 @@ useEffect(()=>{
          {/*Map*/}
           <Map />
           
-      <img src= "/images/JohnsHopkins.jpg" width="600" alt= " " /> 
-      
+      <img src= {img1} width="600" alt= " " /> 
+    
       </div>
       <Card className="app__right">
         <CardContent>
            {/*table*/}
-          <h3>Live cases by country</h3>
+          <h3>country wise total corona cases</h3>
              <Table countries={tableData} />
-          <h3>Worldwide new cases</h3>
+          {/*<h3>Worldwide new cases</h3>*/}
         </CardContent>
       </Card>
     </div>
